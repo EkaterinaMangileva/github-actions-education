@@ -16,7 +16,7 @@ permissions:
 
 
 jobs:
-  run-tests:
+  test:
 #    strategy:
 #      fail-fast: false
 #      matrix:
