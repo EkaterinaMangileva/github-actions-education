@@ -142,7 +142,7 @@ jobs:
       #     source: "."
       #     target: "public_html"
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3.0.1
       - name: Deploy to GitHub Pages
         # id: deployment
         uses: actions/deploy-pages@v4.0.4
