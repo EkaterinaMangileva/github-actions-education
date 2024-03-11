@@ -4,6 +4,7 @@ import pytest
 
 @allure.feature("Simple test")
 @allure.story("1111")
+@allure.suite("test_one")
 class TestDemo:
 
     @allure.title("Успешный тест")
