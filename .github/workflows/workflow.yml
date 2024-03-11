@@ -147,4 +147,4 @@ jobs:
         # id: deployment
         uses: actions/deploy-pages@v1.2.9
         env:
-          PUBLISH_DIR: tags
+          PUBLISH_DIR: https://ekaterinamangileva.github.io/github-actions-education/tags
