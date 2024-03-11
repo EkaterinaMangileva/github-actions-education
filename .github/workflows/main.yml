@@ -80,16 +80,16 @@ jobs:
 
       - name: all tests
         # if: "github.event.inputs.deployment_target == 'all'"
-        run: printenv && pytest tests/prod --alluredir=allure-results && ls allure-results
+        run: printenv && pytest tests/prodi --alluredir=allure-results && ls allure-results
         continue-on-error: true
 
-#      - name: Store allure results
-#        uses: actions/upload-artifact@v4.3.1
-#        with:
-#          name: allure-results
-#          path:
-#            allure-results
-#          retention-days: 2
+      - name: Store allure results
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: allure-results
+          path:
+            allure-results
+          retention-days: 2
 
 
 
