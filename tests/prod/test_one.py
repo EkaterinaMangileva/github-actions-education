@@ -1,7 +1,8 @@
 import allure
 import pytest
 
-
+@allure.feature("Simple test")
+@allure.story("1111")
 class TestDemo:
 
     @allure.title("Успешный тест")

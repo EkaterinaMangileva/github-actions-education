@@ -2,6 +2,8 @@ import allure
 import pytest
 
 
+@allure.feature("Don't simple test")
+@allure.story("existsnce")
 class TestDemo:
 
     @allure.title("Успешный тест")
@@ -21,5 +23,3 @@ class TestDemo:
     def test_broken(self):
         assert 1 == 1
         raise Exception("Ошибка в тесте")
-
-
