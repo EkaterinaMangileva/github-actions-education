@@ -1,4 +1,4 @@
-name: tags workflow
+name: two
 
 on:
   schedule:
