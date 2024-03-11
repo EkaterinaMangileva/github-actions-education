@@ -61,7 +61,7 @@ jobs:
           retention-days: 2
   test:
     runs-on: ubuntu-latest
-#    needs: download-history
+    needs: download-history
 
     steps:
       - name: Checkout code
