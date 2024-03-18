@@ -79,11 +79,11 @@ jobs:
         uses: actions/download-artifact@v4.1.4
 
       - name: Run tests for test_two.py
-        run: python -m pytest --dist=loadfile tests/prod
+        run: python -m pytest -n=auto tests/prod
         continue-on-error: true
 
       - name: Run tests for test_one.py
-        run: python -m pytest --dist=loadfile tests/adm
+        run: python -m pytest -n=auto tests/adm
         continue-on-error: true
 
       - name: Store allure result
