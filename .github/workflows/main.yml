@@ -78,9 +78,12 @@ jobs:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4.1.4
 
-      - name: all tests
-        # if: "github.event.inputs.deployment_target == 'all'"
-        run: printenv && pytest tests --alluredir=allure-result && ls allure-result
+      - name: Run tests for test_two.py
+        run: python -m pytest --dist=loadfile tests/prod
+        continue-on-error: true
+
+      - name: Run tests for test_one.py
+        run: python -m pytest --dist=loadfile tests/adm
         continue-on-error: true
 
       - name: Store allure result
