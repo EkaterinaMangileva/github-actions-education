@@ -85,7 +85,9 @@ jobs:
         run: printenv && pytest tests/prod --alluredir=allure-results && ls allure-results
         continue-on-error: true
 
-
+      - name: second
+        run: printenv && pytest tests/adm --alluredir=allure-results && ls allure-results
+        continue-on-error: true
 
       - name: Store allure results
         uses: actions/upload-artifact@v4.3.1
