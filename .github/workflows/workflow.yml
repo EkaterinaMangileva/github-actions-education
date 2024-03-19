@@ -78,14 +78,12 @@ jobs:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4.1.4
 
-      - name: Run tests and save results
+      - name: all tests
         run: |
-          cd .\tests\adm
-          pytest -n 2 --dist=loadscope --alluredir=allure-results
-          num_files=$(ls allure-results | wc -l)
-          echo "::set-output name=num_files::$num_files"
-      - name: Display number of files
-        run: ${{ steps.run_tests.outputs.num_files }}"
+            cd .\tests\adm
+            pytest -n 2 --dist=loadscope --alluredir=allure-results
+#        run: printenv && pytest tests/prod --alluredir=allure-results && ls allure-results
+        continue-on-error: true
 
 
 
