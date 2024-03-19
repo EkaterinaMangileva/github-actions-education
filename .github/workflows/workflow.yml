@@ -82,7 +82,7 @@ jobs:
 #        run: |
 #            cd .\tests\adm
 #            pytest -n 2 --dist=loadscope --alluredir=allure-results
-        run: printenv && pytest tests/prod tests/adm --alluredir=allure-results && ls allure-results
+        run: pytest -n 2 --dist=loadscope tests/prod tests/adm --alluredir=allure-results && ls allure-results
         continue-on-error: true
 
 
