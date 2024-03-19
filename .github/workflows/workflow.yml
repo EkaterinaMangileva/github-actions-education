@@ -79,16 +79,17 @@ jobs:
         uses: actions/download-artifact@v4.1.4
 
       - name: all tests
-        run: cd ./tests/adm/ ./tests/prod/ && pytest -n 3 --dist=loadscope && --alluredir=allure-results && ls allure-results
-#        run: printenv && pytest tests/prod --alluredir=allure-results && ls allure-results
-        continue-on-error: true
+        run: |
+          cd ./tests/adm/ && pytest -n 3 --dist=loadscope --alluredir=allure-results
+          cd ../prod/ && pytest -n 3 --dist=loadscope --alluredir=allure-results
+          ls allure-results
 
       - name: Store allure results
+        id: upload_allure_results
         uses: actions/upload-artifact@v4.3.1
         with:
           name: allure-results
-          path:
-            allure-results
+          path: allure-results
           retention-days: 2
 
 
