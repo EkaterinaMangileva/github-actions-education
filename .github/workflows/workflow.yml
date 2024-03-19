@@ -79,7 +79,10 @@ jobs:
         uses: actions/download-artifact@v4.1.4
 
       - name: all tests
-        run: cd ./tests/adm/ ./tests/prod/ && pytest -n 3 --dist=loadscope --alluredir=allure-results && ls allure-results
+        run: |
+          cd ./tests/adm/ && pytest -n 3 --dist=loadscope --alluredir=allure-results
+          cd ./tests/prod/ && pytest -n 3 --dist=loadscope --alluredir=allure-results
+          ls allure-results
 #        run: printenv && pytest tests/prod --alluredir=allure-results && ls allure-results
         continue-on-error: true
 
