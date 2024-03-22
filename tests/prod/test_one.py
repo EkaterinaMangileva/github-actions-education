@@ -1,7 +1,10 @@
 import allure
 import pytest
+from qaseio.pytest import qase
 
 
+@qase.title('Первый набор тестов')
+@qase.description('Это фальшивые тесты')
 @allure.feature("Simple test")
 @allure.story("1111")
 @allure.suite("ПЕРВЫЙ")
