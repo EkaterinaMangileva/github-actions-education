@@ -1,8 +1,10 @@
 import allure
 import pytest
+from qaseio.pytest import qase
 
 
-
+@qase.title('Selenium test 2')
+@qase.description('This test checks title')
 @allure.feature("Don't simple test")
 @allure.story("existsnce")
 @allure.suite("test_one")
