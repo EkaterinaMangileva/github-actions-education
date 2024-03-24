@@ -3,8 +3,8 @@ import pytest
 from qaseio.pytest import qase
 
 
-@qase.title('Selenium test 2')
-@qase.description('This test checks title')
+@qase.title('Второй набор тестов')
+@qase.description('Это фальшивые тесты')
 @allure.feature("Don't simple test")
 @allure.story("existsnce")
 @allure.suite("test_one")
