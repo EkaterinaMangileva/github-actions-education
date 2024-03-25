@@ -5,7 +5,7 @@ on:
     inputs:
       qase_api_base_url:
         description: 'Qase API URL'
-        required: true
+        required:
       qase_report:
         description: 'Enabled/disabled reporting to Qase'
         required: true

@@ -17,12 +17,9 @@
 			"host": "qase.io"
 		},
 		"run": {
-			"title": "Test run title",
+			"title": "Test run",
 			"complete": true
 		},
-        "plan": {
-            "id": 1
-        },
 		"defect": true,
 		"project": "DEMO",
 		"chunk": 200
