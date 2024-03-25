@@ -1,0 +1,89 @@
+{
+    "title": "Test run",
+    "execution": {
+        "start_time": 1711341364.7094958,
+        "end_time": 1711341364.8776014,
+        "duration": 168,
+        "cumulative_duration": 112
+    },
+    "stats": {
+        "passed": 2,
+        "failed": 2,
+        "skipped": 2,
+        "broken": 0,
+        "muted": 0,
+        "total": 8
+    },
+    "results": [
+        {
+            "id": "08a14cc5-38c4-4d59-80b3-07995ee3e9f4",
+            "title": "\u041f\u0435\u0440\u0432\u044b\u0439 \u043d\u0430\u0431\u043e\u0440 \u0442\u0435\u0441\u0442\u043e\u0432",
+            "status": "skipped",
+            "duration": 1,
+            "thread": "14288-MainThread"
+        },
+        {
+            "id": "0d3241df-dc17-487c-b10d-3ca457803835",
+            "title": "\u0412\u0442\u043e\u0440\u043e\u0439 \u043d\u0430\u0431\u043e\u0440 \u0442\u0435\u0441\u0442\u043e\u0432",
+            "status": "passed",
+            "duration": 10,
+            "thread": "14288-MainThread"
+        },
+        {
+            "id": "4fdf83c6-1078-403b-92a1-37ce0090b92f",
+            "title": "\u041f\u0435\u0440\u0432\u044b\u0439 \u043d\u0430\u0431\u043e\u0440 \u0442\u0435\u0441\u0442\u043e\u0432",
+            "status": "passed",
+            "duration": 1,
+            "thread": "14288-MainThread"
+        },
+        {
+            "id": "52253044-dc1a-4ac2-993a-26ad34898c37",
+            "title": "\u0412\u0442\u043e\u0440\u043e\u0439 \u043d\u0430\u0431\u043e\u0440 \u0442\u0435\u0441\u0442\u043e\u0432",
+            "status": "invalid",
+            "duration": 2,
+            "thread": "14288-MainThread"
+        },
+        {
+            "id": "7d7e1caa-98de-4206-b9bc-7179f76ac26a",
+            "title": "\u0412\u0442\u043e\u0440\u043e\u0439 \u043d\u0430\u0431\u043e\u0440 \u0442\u0435\u0441\u0442\u043e\u0432",
+            "status": "skipped",
+            "duration": 1,
+            "thread": "14288-MainThread"
+        },
+        {
+            "id": "a323ab7f-cb3c-4dec-8671-ab7074160ffa",
+            "title": "\u041f\u0435\u0440\u0432\u044b\u0439 \u043d\u0430\u0431\u043e\u0440 \u0442\u0435\u0441\u0442\u043e\u0432",
+            "status": "failed",
+            "duration": 9,
+            "thread": "14288-MainThread"
+        },
+        {
+            "id": "f1b650f4-103d-46ea-b63f-be0e2a4f65c1",
+            "title": "\u0412\u0442\u043e\u0440\u043e\u0439 \u043d\u0430\u0431\u043e\u0440 \u0442\u0435\u0441\u0442\u043e\u0432",
+            "status": "failed",
+            "duration": 85,
+            "thread": "14288-MainThread"
+        },
+        {
+            "id": "f8f88581-09d5-4b1b-b80c-1f4ce3968956",
+            "title": "\u041f\u0435\u0440\u0432\u044b\u0439 \u043d\u0430\u0431\u043e\u0440 \u0442\u0435\u0441\u0442\u043e\u0432",
+            "status": "invalid",
+            "duration": 3,
+            "thread": "14288-MainThread"
+        }
+    ],
+    "threads": [
+        "14288-MainThread"
+    ],
+    "suites": [],
+    "environment": null,
+    "host_data": {
+        "system": "Windows",
+        "node": "DESKTOP-ULVEAJC",
+        "release": "10",
+        "version": "10.0.22621",
+        "machine": "AMD64",
+        "python": "3.11.8.final.0",
+        "pip": "22.3.1"
+    }
+}
