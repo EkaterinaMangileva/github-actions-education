@@ -79,16 +79,11 @@ jobs:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4.1.4
 
-      - name: first
-#        run: |
-#            cd .\tests\adm
-#            pytest  --alluredir=allure-results
-        run: printenv && pytest tests/prod -n 2 --dist=loadscope --alluredir=allure-results && ls allure-results
+      - name: all tests
+        run: pytest tests/prod tests/adm --alluredir=allure-result
         continue-on-error: true
 
-      - name: second
-        run: printenv && pytest tests/adm -n 2 --dist=loadscope --alluredir=allure-results && ls allure-results
-        continue-on-error: true
+
 
       - name: Store allure results
         uses: actions/upload-artifact@v4.3.1
