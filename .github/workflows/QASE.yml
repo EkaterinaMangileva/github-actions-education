@@ -2,7 +2,7 @@ name: QASE
 
 on:
   schedule:
-  - cron: "10 12 * * *"
+  - cron: "17 12 * * *"
   workflow_dispatch:
     inputs:
       qase_api_base_url:
