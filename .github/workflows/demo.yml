@@ -1,14 +1,13 @@
 name: demo 1
 
-
 on:
-  schedule:
-  - cron: "30 6 * * *"
+#  schedule:
+#  - cron: "30 6 * * *"
   workflow_dispatch:
 
 env:
-  BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-  CHAT_ID: ${{ secrets.CHAT_ID }}
+#  BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+#  CHAT_ID: ${{ secrets.CHAT_ID }}
   TOKEN: ${{ secrets.TOKEN }}
 
 permissions:
@@ -80,10 +79,10 @@ jobs:
         uses: actions/download-artifact@v4.1.4
 
       - name: all tests
-        run: pytest --alluredir=allure-results
+        run: pytest --alluredir=allure-result
         continue-on-error: true
 
-      - name: Store allure results
+      - name: Store allure result
         uses: actions/upload-artifact@v4.3.1
         with:
           name: allure-results
@@ -105,7 +104,7 @@ jobs:
       - run: sudo wget https://github.com/allure-framework/allure2/releases/download/2.23.1/allure-2.23.1.tgz && sudo tar -zxvf allure-2.23.1.tgz -C /opt/ && sudo ln -s /opt/allure-2.23.1/bin/allure /usr/bin/allure
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4.1.4
-      - run: allure generate -c allure-results -o _site
+      - run: allure generate -c allure-result -o _site
       - name: Store generated report
         uses: actions/upload-artifact@v4.3.1
         with:
