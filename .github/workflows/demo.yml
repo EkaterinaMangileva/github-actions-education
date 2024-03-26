@@ -80,15 +80,15 @@ jobs:
         uses: actions/download-artifact@v4.1.4
 
       - name: all tests
-        run: pytest tests/prod tests/adm --alluredir=result
+        run: pytest --alluredir=allure-results
         continue-on-error: true
 
-      - name: Store allure results
+      - name: Store allure resultss
         uses: actions/upload-artifact@v4.3.1
         with:
-          name: result
+          name: allure-results
           path:
-            results
+            allure-results
           retention-days: 2
 
 
