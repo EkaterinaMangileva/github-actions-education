@@ -80,15 +80,15 @@ jobs:
         uses: actions/download-artifact@v4.1.4
 
       - name: all tests
-        run: pytest --alluredir=allure-result
+        run: pytest --alluredir=allure-results
         continue-on-error: true
 
       - name: Store allure results
         uses: actions/upload-artifact@v4.3.1
         with:
-          name: allure-result
+          name: allure-results
           path:
-            allure-result
+            allure-results
           retention-days: 2
 
 
@@ -105,7 +105,7 @@ jobs:
       - run: sudo wget https://github.com/allure-framework/allure2/releases/download/2.23.1/allure-2.23.1.tgz && sudo tar -zxvf allure-2.23.1.tgz -C /opt/ && sudo ln -s /opt/allure-2.23.1/bin/allure /usr/bin/allure
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4.1.4
-      - run: allure generate -c allure-result -o _site
+      - run: allure generate -c allure-results -o _site
       - name: Store generated report
         uses: actions/upload-artifact@v4.3.1
         with:
