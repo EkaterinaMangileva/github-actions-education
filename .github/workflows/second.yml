@@ -1,41 +1,18 @@
 name: second
 
 on:
-  workflow_dispatch:
-    inputs:
-      qase_api_base_url:
-        description: 'Qase API URL'
-        required: true
-      qase_report:
-        description: 'Enabled/disabled reporting to Qase'
-        required: true
-      qase_project_code:
-        description: 'Qase project code'
-        required: true
-      qase_run_id:
-        description: 'Qase Run ID'
-        required: true
-      qase_run_complete:
-        description: 'Qase Run autocomplete'
-        required: true
+#  workflow_dispatch:
+  pull_request:
+
 env:
-  QASE_API_BASE_URL: ${{ inputs.qase_api_base_url }}
-  QASE_REPORT: ${{ inputs.qase_report }}
-  QASE_PROJECT_CODE: ${{ inputs.qase_project_code }}
-  QASE_RUN_ID: ${{ inputs.qase_run_id }}
-  QASE_RUN_COMPLETE: ${{ inputs.qase_run_complete }}
-  QASE_API_TOKEN: ${{ secrets.QASE_API_TOKEN }}
+  QASE_REPORT: 1
+  QASE_PROJECT_CODE: DEMO
+  QASE_RUN_COMPLETE: true
+  QASE_TESTOPS_API_TOKEN: ${{ secrets.QASE_TESTOPS_API_TOKEN }}
 
 jobs:
-  build-php:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: qase-tms/qase-link-run@main
-        env:
-          QASE_API_TOKEN: ${{ env.QASE_API_TOKEN }}
   test:
     runs-on: ubuntu-latest
-#    needs: download-history
 
     steps:
       - name: Checkout code
@@ -49,16 +26,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v4.1.4
+      - name: tests
+        run: pytest
+        continue-on-error: false
 
-      - name: first
-#        run: |
-#            cd .\tests\adm
-#            pytest  --alluredir=allure-result
-        run: printenv && pytest tests/prod -n 2 --dist=loadscope --alluredir=allure-result && ls allure-result
-        continue-on-error: true
 
-      - name: second
-        run: printenv && pytest tests/adm -n 2 --dist=loadscope --alluredir=allure-result && ls allure-result
-        continue-on-error: true
