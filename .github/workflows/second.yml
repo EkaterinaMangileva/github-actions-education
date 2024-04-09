@@ -3,7 +3,7 @@ name: second
 on:
 #  workflow_dispatch:
   schedule:
-    - cron: "05 11 * * *"
+    - cron: "20 13 * * *"
   pull_request:
 
 env:
