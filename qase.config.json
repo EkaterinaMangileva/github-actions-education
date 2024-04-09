@@ -12,15 +12,10 @@
 	},
 	"testops": {
 		"bulk": true,
-		"api": {
-			"token": "6901e7742fc50e0ccc108c4a6a8a1563f189a92279c298badc44fad1310774e8",
-			"host": "qase.io"
-		},
 		"run": {
-			"title": "Test run",
 			"complete": true
 		},
-		"defect": true,
+		"defect": false,
 		"project": "DEMO",
 		"chunk": 200
 	},
