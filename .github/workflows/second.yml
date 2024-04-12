@@ -1,10 +1,10 @@
 name: second
 
 on:
-#  workflow_dispatch:
-  schedule:
-    - cron: "20 13 * * *"
-  pull_request:
+  workflow_dispatch:
+#  schedule:
+#    - cron: "20 13 * * *"
+#  pull_request:
 
 env:
   QASE_REPORT: 1
